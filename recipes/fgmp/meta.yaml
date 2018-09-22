@@ -1,0 +1,39 @@
+about:
+  home: https://github.com/stajichlab/FGMP
+  license: 'MIT'
+  summary: 'FGMP is a genome content assessment tool focused on fungal genomes'
+
+build:
+  number: 1
+
+package:
+  name: fgmp
+  version: '0.9.0'
+
+requirements:
+  host:
+    - perl-ipc-run
+    - perl-bioperl
+    - perl-io-all
+  run:
+    - perl-ipc-run
+    - perl-bioperl
+    - perl-io-all
+    - hmmer
+    - blast
+    - exonerate
+    - augustus
+    - emboss
+
+source:
+  url: https://github.com/stajichlab/FGMP/archive/v0.9.0.tar.gz
+  sha256: db149b53e61aa66a5d08e58c53cc769d6f5f812d3e07115882ee215d838f60f3
+
+extra:
+  identifiers:
+    - biotools:fgmp
+    - doi:10.1101/049619
+
+test:
+  commands:
+    - fgmp.pl
